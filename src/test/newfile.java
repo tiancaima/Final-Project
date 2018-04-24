@@ -1,5 +1,5 @@
 package test;
 
 public class newfile {
-//À²À²À²À²
+	//æ”¹å˜
 }
