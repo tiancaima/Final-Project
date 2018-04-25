@@ -14,6 +14,7 @@ public class test {
 		/*
 		 * 使用文件地址时必须使用双\\来表示路径
 		 * */
+		//这是我在mac上更改的！
 		Runtime.getRuntime().exec("open /Applications/wechatwebdevtools.app");
 	}
 }
