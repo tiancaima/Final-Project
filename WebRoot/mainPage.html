@@ -116,6 +116,33 @@
 				margin: 30px auto 12px;
 			}
 			
+			#funMainNav-module-img{
+				background-image: url(img/mbg01.png);
+				background-position: -99px 1px;
+			}
+			
+			.funMainNav-module:hover #funMainNav-module-img{
+				background-position: -99px 1px;
+			}
+			
+			#funMainNav-control-img{
+				background-image: url(img/mbg01.png);
+				background-position: -144px -42px;
+			}
+			.funMainNav-control:hover #funMainNav-control-img{
+				background-position: -100px -42px;
+			}
+			
+			#funMainNav-page-img{
+				background-image: url(img/mbg01.png);
+				background-position: -144px -87px;
+			}
+			
+			.funMainNav-page:hover #funMainNav-page-img{
+				background-image: url(img/mbg01.png);
+				background-position: -99px -87px;
+			}
+			
 			#funMainNav-action {
 				position: absolute;
 				top: 65px;
@@ -416,6 +443,7 @@
 								<span id="funMainNav-page-img" class="funMainNav-img"></span>
 								<span>页面</span>
 							</div>
+							<!--三角形-->
 							<div id="funMainNav-action">
 								<div id="triangle"></div>
 							</div>
@@ -708,18 +736,27 @@
 					$(".page-page").hide();
 					$(".control-page").hide();
 					$("#funMainNav-action").css("top", "65px");
+					$("#funMainNav-module-img").css("background-position","-99px 1px");
+					$("#funMainNav-control-img").css("background-position","-144px -42px");
+					$("#funMainNav-page-img").css("background-position","-144px -87px");
 				});
 				$(".funMainNav-control").click(function() {
 					$(".module-page").hide();
 					$(".page-page").hide();
 					$(".control-page").fadeIn(300);
 					$("#funMainNav-action").css("top", "190px");
+					$("#funMainNav-module-img").css("background-position","-144px 1px");
+					$("#funMainNav-control-img").css("background-position","-100px -42px");
+					$("#funMainNav-page-img").css("background-position","-144px -87px");
 				});
 				$(".funMainNav-page").click(function() {
 					$(".module-page").hide();
 					$(".page-page").fadeIn(300);
 					$(".control-page").hide();
 					$("#funMainNav-action").css("top", "320px");
+					$("#funMainNav-module-img").css("background-position","-144px 1px");
+					$("#funMainNav-control-img").css("background-position","-144px -42px");
+					$("#funMainNav-page-img").css("background-position","-99px -87px");
 				});
 
 				//功能模块的添加
