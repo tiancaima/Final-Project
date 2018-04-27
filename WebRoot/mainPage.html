@@ -145,7 +145,7 @@
 			
 			#funMainNav-action {
 				position: absolute;
-				top: 65px;
+				top: 50px;
 				left: 48px;
 				transition: top 0.3s;
 			}
@@ -205,6 +205,49 @@
 				margin: 16px auto 5px auto;
 				cursor: pointer;
 				margin-bottom: 10px;
+			}
+			#module-img1{
+				background-image: url(img/mbg01.png);
+				background-position: 2px -131px;
+			}
+			#text:hover{
+				color: #0000FF;
+			}
+			#text:hover #module-img1{
+				background-position: -48px -131px;
+			}
+			
+			#module-img2{
+				background-image: url(img/mbg01.png);
+				background-position: 0px 0px;
+			}
+			#img:hover{
+				color: #0000FF;
+			}
+			#img:hover #module-img2{
+				background-position: -50px 0px;
+			}
+			
+			#module-img3{
+				background-image: url(img/mbg01.png);
+				background-position: 1px -167px;
+			}
+			#butt:hover{
+				color: #0000FF;
+			}
+			#butt:hover #module-img3{
+				background-position: -49px -167px;
+			}
+			
+			#module-img4{
+				background-image: url(img/mbg01.png);
+				background-position: 2px -87px;
+			}
+			#
+			
+			#module-img5{
+				background-image: url(img/mbg01.png);
+				background-position: 0px -42px;
 			}
 			
 			.module-page-text {
@@ -755,28 +798,82 @@
 					$(".module-page").fadeIn(300);
 					$(".page-page").hide();
 					$(".control-page").hide();
-					$("#funMainNav-action").css("top", "65px");
+					$("#funMainNav-action").css("top", "50px");
+					//1
 					$("#funMainNav-module-img").css("background-position","-99px 1px");
+					$("#funMainNav-module-img").hover(function(){
+						$("#funMainNav-module-img").css("background-position","-99px 1px");
+					},function(){
+						$("#funMainNav-module-img").css("background-position","-99px 1px");
+					})
+					//2
 					$("#funMainNav-control-img").css("background-position","-144px -42px");
+					$("#funMainNav-control-img").hover(function(){
+						$("#funMainNav-control-img").css("background-position","-100px -42px");
+					},function(){
+						$("#funMainNav-control-img").css("background-position","-144px -42px");
+					})
+					//3
 					$("#funMainNav-page-img").css("background-position","-144px -87px");
+					$("#funMainNav-page-img").hover(function(){
+						$("#funMainNav-page-img").css("background-position","-99px -87px");
+					},function(){
+						$("#funMainNav-page-img").css("background-position","-144px -87px");
+					})
 				});
 				$(".funMainNav-control").click(function() {
 					$(".module-page").hide();
 					$(".page-page").hide();
 					$(".control-page").fadeIn(300);
-					$("#funMainNav-action").css("top", "190px");
+					$("#funMainNav-action").css("top", "175px");
+					//1
 					$("#funMainNav-module-img").css("background-position","-144px 1px");
+					$("#funMainNav-module-img").hover(function(){
+						$("#funMainNav-module-img").css("background-position","-99px 1px");
+					},function(){
+						$("#funMainNav-module-img").css("background-position","-144px 1px");
+					})
+					//2
 					$("#funMainNav-control-img").css("background-position","-100px -42px");
+					$("#funMainNav-control-img").hover(function(){
+						$("#funMainNav-control-img").css("background-position","-100px -42px");
+					},function(){
+						$("#funMainNav-control-img").css("background-position","-100px -42px");
+					})
+					//3
 					$("#funMainNav-page-img").css("background-position","-144px -87px");
+					$("#funMainNav-page-img").hover(function(){
+						$("#funMainNav-page-img").css("background-position","-99px -87px");
+					},function(){
+						$("#funMainNav-page-img").css("background-position","-144px -87px");
+					})
 				});
 				$(".funMainNav-page").click(function() {
 					$(".module-page").hide();
 					$(".page-page").fadeIn(300);
 					$(".control-page").hide();
-					$("#funMainNav-action").css("top", "320px");
+					$("#funMainNav-action").css("top", "300px");
+					//1
 					$("#funMainNav-module-img").css("background-position","-144px 1px");
+					$("#funMainNav-module-img").hover(function(){
+						$("#funMainNav-module-img").css("background-position","-99px 1px");
+					},function(){
+						$("#funMainNav-module-img").css("background-position","-144px 1px");
+					})
+					//2
 					$("#funMainNav-control-img").css("background-position","-144px -42px");
+					$("#funMainNav-control-img").hover(function(){
+						$("#funMainNav-control-img").css("background-position","-100px -42px");
+					},function(){
+						$("#funMainNav-control-img").css("background-position","-144px -42px");
+					})
+					//3
 					$("#funMainNav-page-img").css("background-position","-99px -87px");
+					$("#funMainNav-page-img").hover(function(){
+						$("#funMainNav-page-img").css("background-position","-99px -87px");
+					},function(){
+						$("#funMainNav-page-img").css("background-position","-99px -87px");
+					})
 				});
 
 				//功能模块的添加
