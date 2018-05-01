@@ -4,11 +4,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import com.superma.content.Button;
-import com.superma.content.Container;
-import com.superma.content.Picture;
-import com.superma.content.Text;
 import com.superma.fileDao.FileDao;
+import com.superma.model.Button;
+import com.superma.model.Container;
+import com.superma.model.Picture;
+import com.superma.model.Text;
 
 public class CreateFile {
 	private ArrayList<ArrayList<Container>> pagelist;

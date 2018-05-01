@@ -2,11 +2,11 @@ package com.superma.dataprocess;
 
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
-import com.superma.content.Button;
-import com.superma.content.Container;
-import com.superma.content.Picture;
-import com.superma.content.Text;
 import com.superma.createfile.CreateFile;
+import com.superma.model.Button;
+import com.superma.model.Container;
+import com.superma.model.Picture;
+import com.superma.model.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
