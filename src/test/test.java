@@ -2,6 +2,8 @@ package test;
 
 import java.io.IOException;
 
+import com.superma.conn.conn;
+
 public class test {
 
 	public static void main(String[] args) throws IOException {
@@ -15,6 +17,7 @@ public class test {
 		 * 使用文件地址时必须使用双\\来表示路径
 		 * */
 		//这是我在mac上更改的！
-		Runtime.getRuntime().exec("open /Applications/wechatwebdevtools.app");
+		//Runtime.getRuntime().exec("open /Applications/wechatwebdevtools.app");
+		new conn().getCon();
 	}
 }
