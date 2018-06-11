@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -23,6 +23,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    This is my JSP page. <br>
+    <jsp:useBean id="user" class="com.superma.model.userTable"></jsp:useBean>
+    <jsp:useBean id="userservice" class="com.superma.service.userservice"></jsp:useBean>
+    
+    <jsp:setProperty property="*" name="user"/>
+   <%
+   if(userservice.valiUser(user)){
+   	response.sendRedirect("mainPage.html");
+   }else{
+   out.print("<script language='javascript'>alert('用户名或者密码错误！');window.location.href='index.jsp';</script>");
+   }
+   %>
   </body>
 </html>

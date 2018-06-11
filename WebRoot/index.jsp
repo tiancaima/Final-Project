@@ -480,12 +480,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<form action = "validate.jsp" name="login">
 					<div class="login-ic">
 						<i></i>
-						<input type="text" value="请输入邮箱或者电话" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '请输入邮箱或者电话';}" />
+						<input type="text" name="username" value="请输入邮箱或者电话" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '请输入邮箱或者电话';}" />
 						<div class="clear"> </div>
 					</div>
 					<div class="login-ic">
 						<i class="icon"></i>
-						<input type="password" value="" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}" />
+						<input type="password" name="password" value="" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}" />
 						<div class="clear"> </div>
 					</div>
 
