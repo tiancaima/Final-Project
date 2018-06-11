@@ -4,7 +4,7 @@ import java.io.*;
 
 public class FileDao {
     //生成文件路径
-    private static String path = "/Users/mac/Desktop/Text/page/";//创建文件路径
+    private static String path = "D:\\毕设演示";//创建文件路径
     //文件路径+名称
     private static  String filenameTemp;
     /*

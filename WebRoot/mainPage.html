@@ -591,36 +591,62 @@
 				<div class="editorMain" id="editorMain">
 					<div id="editorMain-content" class="editorMain-content">
 						<div id="mainApp" class="mainApp">
-							<div class="editorMain-tital">
-								<span>首页</span>
-							</div>
+							<div class="editorMain-tital">首页</div>
 							<div class="heidden">
 								<!--第一个页面内容-->
 								<div class="editorMain-Con" id="editorMain-Con1">
 									<!--自由容器-->
-									<!--<div class="editorMain-Con-con" id="content22">-->
+									<div class="editorMain-Con-con" id="content1">
 										<!--自由容器标题-->
-										<!--<div class="mainTital">-->
-											<!--<span class="mainTital-text">标题内容1</span>-->
-										<!--</div>-->
+										<div class="mainTital">
+											<span class="mainTital-text">标题内容1</span>
+										</div>
 										<!--自由容器内容-->
-										<!--<div class="mainContent">-->
+										<div class="mainContent">
 											<!--可输入内容-->
-											<!--<div class="mainContent-text" id="mainContent-text22">双击输入内容...</div>-->
+											<div class="mainContent-text" id="mainContent-text1">双击输入内容...</div>
 											<!--内容按钮-->
-											<!--<div class="mainContent-butt" id="mainContent-butt22">按钮</div>-->
+											<div class="mainContent-butt" id="mainContent-butt1">按钮</div>
 											<!--图片-->
-											<!--<img class="mainContent-img" id="mainContent-img22" src="img/HBuilder.png" />-->
-										<!--</div>-->
-									<!--</div>-->
+											<img class="mainContent-img" id="mainContent-img1" src="img/HBuilder.png" />
+										</div>
+									</div>
 								</div>
 								<!--第二个页面内容-->
 								<div class="editorMain-Con" id="editorMain-Con2" style="display: none;">
-									
+									<div class="editorMain-Con-con" id="content2">
+										<!--自由容器标题-->
+										<div class="mainTital">
+											<span class="mainTital-text">标题内容2</span>
+										</div>
+										<!--自由容器内容-->
+										<div class="mainContent">
+											<!--可输入内容-->
+											<div class="mainContent-text" id="mainContent-text2">双击输入内容...</div>
+											<!--内容按钮-->
+											<div class="mainContent-butt" id="mainContent-butt2">按钮</div>
+											<!--图片-->
+											<img class="mainContent-img" id="mainContent-img2" src="img/HBuilder.png" />
+										</div>
+									</div>
 								</div>
 								<!--第三个页面内容-->
 								<div class="editorMain-Con" id="editorMain-Con3" style="display: none;">
-									
+									<div class="editorMain-Con-con" id="content3">
+										<!--自由容器标题-->
+										<div class="mainTital">
+											<span class="mainTital-text">标题内容3</span>
+										</div>
+										<!--自由容器内容-->
+										<div class="mainContent">
+											<!--可输入内容-->
+											<div class="mainContent-text" id="mainContent-text3">双击输入内容...</div>
+											<!--内容按钮-->
+											<div class="mainContent-butt" id="mainContent-butt3">按钮</div>
+											<!--图片-->
+											<img class="mainContent-img" id="mainContent-img3" src="img/HBuilder.png" />
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="editorMain-Bottom">
@@ -690,27 +716,56 @@
 			var pagenubb = 3; //页面编号
 			var keypage = 1; //当前选定页面
 
-			var connub = 0; //自由容器个数
-			var connubb = 0; //自由容器编号
+			var connub = 3; //自由容器个数
+			var connubb = 4; //自由容器编号
 			var keycontent = "content22"; //当前选定自由容器
 
-			var buttnub = 0; //按钮个数
-			var buttnubb = 0; //按钮编号
+			var buttnub = 3; //按钮个数
+			var buttnubb = 4; //按钮编号
 			var keybutt; //当前选定按钮
 
-			var textnub = 0; //文本框个数
-			var textnubb = 0; //文本框编号
+			var textnub = 3; //文本框个数
+			var textnubb = 4; //文本框编号
 			var keytext; //当前选定文本框
 
-			var imgnub = 0; //图片个数
-			var imgnubb = 0; //图片编号
+			var imgnub = 3; //图片个数
+			var imgnubb = 4; //图片编号
 			var keyim; //当前选定图片
 			$(function() {
 
 				//自由容器设置
 
-				$("#editorMain-Con" + keypage).on("click", ".editorMain-Con-con", function() {
+				$("#editorMain-Con" + 1).on("click", ".editorMain-Con-con", function() {
 					keycontent = $(this).attr("id");
+					console.log("keycontent=   "+keycontent);
+					$(".free-text").val($("#" + keycontent + " .mainTital-text").text());
+					if($("#" + keycontent + " .mainTital").is(":hidden")) {
+						$(".free-text").attr("disabled", "disabled");
+						$(".free-text").val("不可输入");
+						$("#freeTitle2").click();
+					} else {
+						$(".free-text").removeAttr("disabled");
+						$(".free-text").val($("#" + keycontent + " .mainTital-text").text());
+						$("#freeTitle1").click();
+					}
+				});
+				$("#editorMain-Con" + 2).on("click", ".editorMain-Con-con", function() {
+					keycontent = $(this).attr("id");
+					console.log("keycontent=   "+keycontent);
+					$(".free-text").val($("#" + keycontent + " .mainTital-text").text());
+					if($("#" + keycontent + " .mainTital").is(":hidden")) {
+						$(".free-text").attr("disabled", "disabled");
+						$(".free-text").val("不可输入");
+						$("#freeTitle2").click();
+					} else {
+						$(".free-text").removeAttr("disabled");
+						$(".free-text").val($("#" + keycontent + " .mainTital-text").text());
+						$("#freeTitle1").click();
+					}
+				});
+				$("#editorMain-Con" + 3).on("click", ".editorMain-Con-con", function() {
+					keycontent = $(this).attr("id");
+					console.log("keycontent=   "+keycontent);
 					$(".free-text").val($("#" + keycontent + " .mainTital-text").text());
 					if($("#" + keycontent + " .mainTital").is(":hidden")) {
 						$(".free-text").attr("disabled", "disabled");
@@ -867,11 +922,14 @@
 
 				//小程序bottom动作/页面切换
 				$(".mainApp").on("click", ".editorMain-Bottom-item", function() {
+					
 					for(var i = 1; i <= pagenub; i++) {
 						var str = $(this).attr("id");
 						if(str.charAt(str.length - 1) == i) {
 							$("#editorMain-Con" + i).show();
-							keypage = i;
+							keypage = i;//当前选中页面
+							$(".editorMain-tital").text($("#editorMain-Bottom-item" + keypage).text());
+							console.log($("#editorMain-Bottom-item" + keypage).text());
 						} else {
 							$("#editorMain-Con" + i).hide();
 						}
