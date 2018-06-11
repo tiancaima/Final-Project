@@ -4,7 +4,7 @@ import java.io.*;
 
 public class FileDao {
     //生成文件路径
-    private static String path = "D:\\毕设演示";//创建文件路径
+    private static String path = "D:\\毕设演示\\page\\";//创建文件路径
     //文件路径+名称
     private static  String filenameTemp;
     /*
@@ -15,7 +15,10 @@ public class FileDao {
      */
     private boolean cFile(String fileNma, String filecontent, String tpye) throws IOException {
         boolean bool = false;
-        filenameTemp = path+ fileNma + "/" + fileNma + tpye;//文件路径+名称+文件类型
+        	
+        //注意windows和Mac的地址区别
+        
+        filenameTemp = path+ fileNma + "\\" + fileNma + tpye;//文件路径+名称+文件类型 
         System.out.print(filenameTemp+"\n");
         File file = new File(filenameTemp);
         if (!file.exists()) {

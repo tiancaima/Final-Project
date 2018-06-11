@@ -49,6 +49,7 @@ public class Myservlet extends HttpServlet {
 		//调用数据保存方法
 		DataProcess datapro = new DataProcess();
 		datapro.Data(jsonString);
+		System.out.println("数据接收成功！");
 	}
 
 }

@@ -56,6 +56,7 @@ public class CreateFile {
 			FileDao fd = new FileDao();
 			fd.create(filename[i-1], wxtml, ".wxml");
 			i++;
+			System.out.println("创建第一个文件！");
 		}
 		Runtime.getRuntime().exec("C:\\Program Files (x86)\\Tencent\\微信web开发者工具\\微信web开发者工具.exe");
 	}

@@ -421,6 +421,10 @@
 				background-color: red;
 				border-radius: 13px;
 			}
+			.mainContent-img{
+				height: 50px;
+				width: 50px;
+			}
 			/*右边设置菜单栏*/
 			
 			.editorRight {
@@ -525,10 +529,10 @@
 										<div class="module-page-img" id="module-img4"></div>
 										<div class="module-page-text4 module-page-text">自由容器</div>
 									</div>
-									<div class="module-page-ab" id="manyimg">
+									<!--<div class="module-page-ab" id="manyimg">
 										<div class="module-page-img" id="module-img5"></div>
 										<div class="module-page-text5 module-page-text">多图文</div>
-									</div>
+									</div>-->
 								</div>
 							</div>
 
@@ -604,7 +608,7 @@
 										<!--自由容器内容-->
 										<div class="mainContent">
 											<!--可输入内容-->
-											<div class="mainContent-text" id="mainContent-text1">双击输入内容...</div>
+											<div class="mainContent-text" id="mainContent-text1" contenteditable="true">点击输入内容...</div>
 											<!--内容按钮-->
 											<div class="mainContent-butt" id="mainContent-butt1">按钮</div>
 											<!--图片-->
@@ -622,7 +626,7 @@
 										<!--自由容器内容-->
 										<div class="mainContent">
 											<!--可输入内容-->
-											<div class="mainContent-text" id="mainContent-text2">双击输入内容...</div>
+											<div class="mainContent-text" id="mainContent-text2" contenteditable="true">点击输入内容...</div>
 											<!--内容按钮-->
 											<div class="mainContent-butt" id="mainContent-butt2">按钮</div>
 											<!--图片-->
@@ -640,7 +644,7 @@
 										<!--自由容器内容-->
 										<div class="mainContent">
 											<!--可输入内容-->
-											<div class="mainContent-text" id="mainContent-text3">双击输入内容...</div>
+											<div class="mainContent-text" id="mainContent-text3" contenteditable="true">点击输入内容...</div>
 											<!--内容按钮-->
 											<div class="mainContent-butt" id="mainContent-butt3">按钮</div>
 											<!--图片-->
@@ -718,7 +722,7 @@
 
 			var connub = 3; //自由容器个数
 			var connubb = 4; //自由容器编号
-			var keycontent = "content22"; //当前选定自由容器
+			var keycontent = "content1"; //当前选定自由容器
 
 			var buttnub = 3; //按钮个数
 			var buttnubb = 4; //按钮编号
@@ -734,49 +738,49 @@
 			$(function() {
 
 				//自由容器设置
-
 				$("#editorMain-Con" + 1).on("click", ".editorMain-Con-con", function() {
-					keycontent = $(this).attr("id");
-					console.log("keycontent=   "+keycontent);
-					$(".free-text").val($("#" + keycontent + " .mainTital-text").text());
-					if($("#" + keycontent + " .mainTital").is(":hidden")) {
-						$(".free-text").attr("disabled", "disabled");
-						$(".free-text").val("不可输入");
-						$("#freeTitle2").click();
-					} else {
-						$(".free-text").removeAttr("disabled");
+						keycontent = $(this).attr("id");
+						console.log("keycontent=   " + keycontent);
 						$(".free-text").val($("#" + keycontent + " .mainTital-text").text());
-						$("#freeTitle1").click();
-					}
-				});
-				$("#editorMain-Con" + 2).on("click", ".editorMain-Con-con", function() {
-					keycontent = $(this).attr("id");
-					console.log("keycontent=   "+keycontent);
-					$(".free-text").val($("#" + keycontent + " .mainTital-text").text());
-					if($("#" + keycontent + " .mainTital").is(":hidden")) {
-						$(".free-text").attr("disabled", "disabled");
-						$(".free-text").val("不可输入");
-						$("#freeTitle2").click();
-					} else {
-						$(".free-text").removeAttr("disabled");
+						if($("#" + keycontent + " .mainTital").is(":hidden")) {
+							$(".free-text").attr("disabled", "disabled");
+							$(".free-text").val("不可输入");
+							$("#freeTitle2").click();
+						} else {
+							$(".free-text").removeAttr("disabled");
+							$(".free-text").val($("#" + keycontent + " .mainTital-text").text());
+							$("#freeTitle1").click();
+						}
+					});
+					$("#editorMain-Con" + 2).on("click", ".editorMain-Con-con", function() {
+						keycontent = $(this).attr("id");
+						console.log("keycontent=   " + keycontent);
 						$(".free-text").val($("#" + keycontent + " .mainTital-text").text());
-						$("#freeTitle1").click();
-					}
-				});
-				$("#editorMain-Con" + 3).on("click", ".editorMain-Con-con", function() {
-					keycontent = $(this).attr("id");
-					console.log("keycontent=   "+keycontent);
-					$(".free-text").val($("#" + keycontent + " .mainTital-text").text());
-					if($("#" + keycontent + " .mainTital").is(":hidden")) {
-						$(".free-text").attr("disabled", "disabled");
-						$(".free-text").val("不可输入");
-						$("#freeTitle2").click();
-					} else {
-						$(".free-text").removeAttr("disabled");
+						if($("#" + keycontent + " .mainTital").is(":hidden")) {
+							$(".free-text").attr("disabled", "disabled");
+							$(".free-text").val("不可输入");
+							$("#freeTitle2").click();
+						} else {
+							$(".free-text").removeAttr("disabled");
+							$(".free-text").val($("#" + keycontent + " .mainTital-text").text());
+							$("#freeTitle1").click();
+						}
+					});
+					
+					$("#editorMain-Con" + 3).on("click", ".editorMain-Con-con", function() {
+						keycontent = $(this).attr("id");
+						console.log("keycontent=   " + keycontent);
 						$(".free-text").val($("#" + keycontent + " .mainTital-text").text());
-						$("#freeTitle1").click();
-					}
-				});
+						if($("#" + keycontent + " .mainTital").is(":hidden")) {
+							$(".free-text").attr("disabled", "disabled");
+							$(".free-text").val("不可输入");
+							$("#freeTitle2").click();
+						} else {
+							$(".free-text").removeAttr("disabled");
+							$(".free-text").val($("#" + keycontent + " .mainTital-text").text());
+							$("#freeTitle1").click();
+						}
+					});
 
 				$(".free-text").keyup(function() {
 					//点击后焦点内容框
@@ -796,7 +800,7 @@
 					$("#" + keycontent).remove();
 				});
 				//				自由容器拖动设置
-				$(".editorMain-Con-con").arrangeable();
+//				$(".editorMain-Con-con").arrangeable();
 
 				//				输入文字设置
 				$(".mainContent-text").dblclick(function() {
@@ -908,7 +912,7 @@
 				});
 				$("#text").click(function() {
 					//生成文本框
-					$("#" + keycontent + " .mainContent").append("<div class='mainContent-text' id='content-text" + textnubb + "'>双击输入内容...</div>");
+					$("#" + keycontent + " .mainContent").append("<div class='mainContent-text' id='content-text" + textnubb + "' contenteditable='true'>双击输入内容...</div>");
 					$("#content-text" + textnubb).dblclick(function() {
 						$("#content-text" + textnubb).attr("contenteditable", "true");
 					});
@@ -919,6 +923,33 @@
 					textnub++;
 					textnubb++;
 				});
+				
+				
+				$( ".mainContent-img" ).resizable({
+      				helper: "ui-resizable-helper"
+    			});
+    			$( ".mainContent-img" ).draggable({ containment: ".mainContent", scroll: false });
+				$("#img").click(function(){
+					//生成图片
+					$("#" + keycontent + " .mainContent").append("<img class='mainContent-img' id='mainContent-img"+imgnubb+"' src='img/HBuilder.png'/>");
+					$( ".mainContent-img" ).resizable({
+      					helper: "ui-resizable-helper"
+    				});
+    				$( ".mainContent-img" ).draggable({ containment: ".mainContent", scroll: false });
+					imgnub++;
+					imgnubb++;
+				})
+				
+				
+				$( ".mainContent-butt" ).draggable({ containment: ".mainContent", scroll: false });
+				$("#butt").click(function() {
+					//生成按钮
+					$("#" + keycontent + " .mainContent").append("<div class='mainContent-butt' id='mainContent-butt" + buttnubb + "'>按钮</div>");
+					$( ".mainContent-butt" ).draggable({ containment: ".mainContent", scroll: false });
+					buttnub++;
+					buttnubb++;
+				});
+
 
 				//小程序bottom动作/页面切换
 				$(".mainApp").on("click", ".editorMain-Bottom-item", function() {
@@ -936,13 +967,7 @@
 					}
 				})
 
-				$("#butt").click(function() {
-					//生成按钮
-					$("#" + keycontent + " .mainContent").append("<div class='mainContent-butt' id='mainContent-butt" + buttnubb + "'>按钮</div>");
-					buttnub++;
-					buttnubb++;
-				});
-
+				
 				//顶部动作（数据传输）
 
 				//异步传输
