@@ -800,7 +800,7 @@
 					$("#" + keycontent).remove();
 				});
 				//				自由容器拖动设置
-//				$(".editorMain-Con-con").arrangeable();
+				$(".editorMain-Con-con").arrangeable();
 
 				//				输入文字设置
 				$(".mainContent-text").dblclick(function() {
@@ -924,23 +924,12 @@
 					textnubb++;
 				});
 				
-				
-				$( ".mainContent-img" ).resizable({
-      				helper: "ui-resizable-helper"
-    			});
-    			$( ".mainContent-img" ).draggable({ containment: ".mainContent", scroll: false });
 				$("#img").click(function(){
 					//生成图片
 					$("#" + keycontent + " .mainContent").append("<img class='mainContent-img' id='mainContent-img"+imgnubb+"' src='img/HBuilder.png'/>");
-					$( ".mainContent-img" ).resizable({
-      					helper: "ui-resizable-helper"
-    				});
-    				$( ".mainContent-img" ).draggable({ containment: ".mainContent", scroll: false });
 					imgnub++;
 					imgnubb++;
 				})
-				
-				
 				$( ".mainContent-butt" ).draggable({ containment: ".mainContent", scroll: false });
 				$("#butt").click(function() {
 					//生成按钮
